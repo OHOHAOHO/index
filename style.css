@@ -1,0 +1,882 @@
+@charset "UTF-8";
+
+/* 기본 색상 */
+:root {
+	--main-color: #5D9AB2;
+	--accent-color: #BF6A7A;
+	--dark-main-color: #2B5566;
+	--text-bright-color: #fff;
+	--icon-color: #fff;
+	--icon-bk-color: #ddd;
+	--gray-color: #ddd;
+	--large-width: 1000px;
+	--middle-width: 800px;
+}
+
+
+/* 기본 설정: 폰트 크기*/
+@media (max-width: 599px){/*HTML코드 전체를 마크업한 루트요소 html에 페이지의 기본 폰트 크기를 지정한다. root: 선택자를 사용해 브레이크포인트마다*/
+	:root{/*다음과 같은 폰트 크기를 지정한다.*/
+		font-size: 14px;/*브라우저 너비가 599px 이하일 때의 기본 폰트는 14px*/
+	}
+}
+
+@media (min-width: 600px) and (max-width: 799px){
+	:root{
+		font-size: 16px;/*브라우저 너비가 600~799px 일 때의 기본 폰트는 16px*/
+	}
+}
+
+@media(min-width: 800px){
+	:root{
+		font-size: 18px;/*브라우저 너비가 800px 이상 일 때 폰트크기는 18px*/
+	}
+}
+
+body{font-size: 16px}/*기본 폰트 설정은 폰트 크기를 따로 지정하지 않은 요소에 영향을 줄 수 있다. 영향을 주지 않게 body의 font-size를 16px로 설정*/
+
+
+
+/* 기본 설정: 페이지 전체 */
+body {
+	margin: 0;
+	font-family: '맑은 고딕',
+		'Apple SD Gothic Neo',
+		sans-serif;
+}
+
+
+/* 콘텐츠A: 히어로 이미지 */
+.conA {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 450px;
+	min-height: 0;
+	background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(img/balloon.jpg);
+	background-position: center;
+	background-size: cover;
+	color: #fff;
+	color: var(--text-bright-color);
+	text-align: center;
+}
+/*
+.conA .compact{
+	height: 450px;
+	min-height: 0;
+	background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(img/balloon.jpg);
+}*/
+
+.conA h1 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15vw;
+	letter-spacing: 0.2em;
+	margin-left: 0.2em;
+}
+
+.conA p {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 18px;
+}
+
+.conA img {
+	width: 20%;
+}
+
+.conA a {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 10px 30px;
+	border: solid 3px currentColor;
+	border-radius: 6px;
+	background-color: #BF6A7A;
+	background-color: var(--accent-color);
+	color: #fff;
+	color: var(--text-bright-color);
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.conA a:hover	{
+	background-image: linear-gradient(
+		rgba(255,255,255,0.2),
+		rgba(255,255,255,0.2)
+	);
+}
+
+
+@media (min-width: 768px) {
+	.conA h1 {
+		font-size: 115px;
+	}
+
+	.conA p {
+		font-size: 24px;
+	}
+}
+
+
+
+/* 콘텐츠B: 개요(아이콘 + 글자) */
+.conB .container {
+	padding-top: 80px;
+	padding-bottom: 20px;
+}
+
+.conB .text {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 60px;
+	text-align: center;
+}
+
+.conB h2 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+.conB p {
+	margin-top: 0;
+	margin-bottom: 20px;
+	font-size: 14px;
+	line-height: 1.8;
+	opacity: 0.8;
+}
+
+.conB a {
+	color: #5D9AB2;
+	color: var(--main-color);
+	text-decoration: none;
+}
+
+.conB a:hover	{
+	text-decoration: underline;
+}
+
+.conB .icon	{
+	display: inline-block;
+	margin-bottom: 20px;
+	font-size: 40px;
+	width: 2em;
+	line-height: 2em;
+	border-radius: 50%;
+	text-align: center;
+	background-color: #ddd;
+	background-color: var(--icon-bk-color);
+	color: #fff;
+	color: var(--icon-color);
+}
+
+@media (min-width: 768px) {
+	.conB .container {
+		display: flex;
+		max-width: 1000px;
+		max-width: var(--large-width);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.conB .text	{
+		flex: 1;
+	}
+}
+
+
+
+/* 콘텐츠C: 개요(이미지 + 글자) */
+.conC {
+	background-color: #5D9AB2;
+	background-color: var(--main-color);
+	color: #fff;
+	color: var(--text-bright-color);
+}
+
+.conC .text {
+	padding: 20px;
+}
+
+.conC h2 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+.conC p {
+	margin-top: 0;
+	margin-bottom: 20px;
+	font-size: 14px;
+	line-height: 1.8;
+	opacity: 0.8;
+}
+
+.conC a {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 10px 30px;
+	border: solid 3px currentColor;
+	border-radius: 6px;
+	background-color: #BF6A7A;
+	background-color: var(--accent-color);
+	color: #fff;
+	color: var(--text-bright-color);
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.conC a:hover	{
+	background-image: linear-gradient(
+		rgba(255,255,255,0.2),
+		rgba(255,255,255,0.2)
+	);
+}
+
+.conC .photo {
+	min-height: 200px;
+	background-image: url(img/note.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+@media (min-width: 768px) {
+	.conC .container {
+		display: flex;
+		max-width: 1000px;
+		max-width: var(--large-width);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.conC .photo {
+		flex: 3;
+	}
+
+	.conC .text {
+		flex: 2;
+		padding: 50px;
+	}
+}
+
+
+
+/* 콘텐츠D: 개요(이미지 + 글자 : 반대로 배치하기) */
+.conD .container {
+	padding-top: 2px;
+}
+
+.conD .text {
+	padding: 20px;
+}
+
+.conD h2 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+.conD p {
+	margin-top: 0;
+	margin-bottom: 20px;
+	font-size: 14px;
+	line-height: 1.8;
+	opacity: 0.8;
+}
+
+.conD a {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 10px 30px;
+	box-shadow: 0 0 0 1px #888;
+	border: solid 3px currentColor;
+	border-radius: 6px;
+	background-color: #BF6A7A;
+	background-color: var(--accent-color);
+	color: #fff;
+	color: var(--text-bright-color);
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.conD a:hover	{
+	background-image: linear-gradient(
+		rgba(255,255,255,0.2),
+		rgba(255,255,255,0.2)
+	);
+}
+
+.conD .photo {
+	min-height: 200px;
+	background-image: url(img/life.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+@media (min-width: 768px) {
+	.conD .container {
+		display: flex;
+		flex-direction: row-reverse;
+		max-width: 1000px;
+		max-width: var(--large-width);
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+	.conD .photo {
+		flex: 0 0 400px;
+	}
+
+	.conD .text {
+		flex: 1;
+		padding: 50px;
+	}
+}
+
+
+
+/* 푸터 */
+footer {
+	color: #fff;
+	color: var(--text-bright-color);
+	background-color: #2B5566;
+	background-color: var(--dark-main-color);
+}
+
+footer .container {
+	padding: 40px 20px;
+}
+
+
+@media (min-width: 768px) {
+	footer .container {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 1000px;
+		max-width: var(--large-width);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.footA {
+		flex: 0 0 40%;
+	}
+
+	.footB {
+		flex: 0 0 60%;
+	}
+
+	.footC {
+		flex: 0 0 100%;
+	}
+}
+
+
+/* 푸터A: 사이트 정보 */
+.footA {
+	margin-bottom: 30px;
+}
+
+.footA h2 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	letter-spacing: 0.2em;
+}
+
+.footA p {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 14px;
+}
+
+.footA a {
+	color: inherit;
+	text-decoration: none;
+}
+
+
+/* 푸터B: 푸터 메뉴 */
+.footB div {
+	margin-bottom: 20px;
+}
+
+.footB h3 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	border-bottom: solid 1px currentColor;
+	font-size: 14px;
+}
+
+.footB ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.footB a {
+	display: block;
+	padding: 5px;
+	color: inherit;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.footB a:hover {
+	background-color: rgba(0,0,0,0.3);
+}
+
+
+@media (min-width: 768px) {
+	.footB {
+		display: flex;
+	}
+
+	.footB div {
+		flex: 1;
+	}
+
+	.footB div:not(:first-child) {
+		margin-left: 40px;
+	}
+}
+
+
+/* 푸터C: 저작권 */
+.footC {
+	font-size: 12px;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+/* 푸터D: SNS 메뉴 */
+.footD {
+	margin-top: 20px;
+}
+
+.footD ul {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.footD a {
+	display: block;
+	margin-right: 8px;
+	padding: 0;
+	color: inherit;
+	font-size: 16px;
+	text-decoration: none;
+	border: solid 1px currentColor;
+	width: 2em;
+	line-height: 2em;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.footD a:hover {
+	background-color: rgba(0,0,0,0.3);
+}
+
+
+/* 헤더 */
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	background-color: rgba(255,255,255,0.9);
+}
+
+.nohero header{
+	position: static;
+	border-bottom: solid 1px #ddd;
+	border-bottom: solid 1px var(--gray-color);/*히어로 이미지를 출력하지 않는 페이지에서 헤더 아래에 구분선을 넣는다.*/
+}/*nohero header 선택자의 border-bottom 으로 구분선 디자인을 지정한다. */
+
+/* 헤더A: 사이트 이름 */
+.headA {
+	display: inline-block;
+	line-height: 70px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: #5D9AB2;
+	background-color: var(--main-color);
+	color: #fff;
+	color: var(--text-bright-color);
+	font-family: 'Montserrat', sans-serif;
+	font-size: 24px;
+	text-decoration: none;
+}
+
+
+/* 헤더B: 네비게이션 메뉴 */
+.headB ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.headB a {
+	display: block;
+	padding: 15px;
+	color: inherit;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.headB a:hover {
+	background-color: rgba(0,0,0,0.3);
+}
+
+@media (min-width: 768px) {
+	header .container {
+		display: flex;/*display를 flex로 맞추면, 사이트 이름과 내비게이션 메뉴 모두 너비를 따로 지정하지 않아 내부의 내용에 맞게 크기를 갖는다.*/
+		align-items: center;/*세로 정 중앙 정렬되게 div class="container"의 align-items을 center*/
+		justify-content: space-between;/*왼쪽과 오른쪽 끝에 각각 위치하도록 justify-content를 space-between으로 지정해 준다.*/
+		max-width: 1000px;
+		max-width: var(--large-width);
+		margin-left: auto;/*헤더의 너비를 콘텐츠, 푸터와 맞추기 위해 컨테이너 박스 div class="container"의 max-width를 너비(--large-width/1000px)로 설정한다. 이어서 margin-left와 margin-right을 auto로 설정해서 중앙 정렬한다.*/
+		margin-right: auto;
+	}
+
+	.headB ul {
+		display: flex;
+	}
+}
+
+
+/* 헤더C: 토글 버튼*/
+
+@media (max-width: 767px){/*작은 화면에서는 내비 메뉴를 감춰서 보이지 않게 만든다. 작은 화면전용 미디어 쿼리에서 내비 메뉴의 display를 none으로 지정한다.*/
+	/*작은 화면 전용 설정*/
+  header .container-small{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+/*164쪽의 display, align-items, justify-content를 설정한다. 또한 브라우저 화면의 너비가 767px 이하일 때 적용되도록 새로운 미디어 쿼리 @media(max-width: 767px)을 추가하고 내부에 지정한다.*/
+	.headC {
+		margin-right: 10px;/*토글 버튼의 오른쪽 여백 크기 지정*/
+		padding: 0;/*버튼의 기본 디자인 제거하기*/
+		border: none;/*버튼의 기본적인 디자인을 제거한다. padding으로 버튼 안쪽의 여백, border와 outline으로 테두리, background로 배경을 제거 한다. 제거 후 아이콘만 남는다.*/
+		outline: none;
+		background: none;
+		font-size: 28px;/*↓아래 참조...*/
+		opacity: 0.5;/*아이콘의 크기와 색을 조정한다. font-size로 크기를 28px, opacity로 투명도를 0.5로 지정해서 색을 연하게 만든다.*/
+		cursor: pointer;/*커서의  형태, 버튼에 커서를 올렸을 때 기본적으로 화살표 형태의 커서가 뜬다. 링크에 커서를 올릴 때 처럼 손 형태로 변경한다. cursor를 pointer로 지정한다.*/
+	}
+
+	.headC:hover{/*토글 버튼에 커서를 올릴 때의 디자인을 지정한다. 색을 조금 연하게 만들 수 있게 .headC:hover 선택자를 추가하고, opacity를 0.3으로 지정한다. 그러면 토글 버튼 디자인을 완성한다.*/
+		opacity: 0.3;
+	}
+
+	.headB {
+		display: none;
+	}
+}
+
+@media (min-width: 768px){/*큰 화면에 토글 버튼이 보이지 않게 설정한다. 미디어쿼리를 만들고, 브라우저의 너비가 768px이상일 때를 지정한다.*/
+	/* 큰 화면 전용 설정*//*이어 내부 토글 버튼 button class="headC"의 display를 none으로 지정해서 보이지 않게 한다.*/
+	.headC{
+		display: none;
+	}
+
+	.headB{
+		display: block !important;/*토글 버튼으로 메뉴를 열고 닫다가 화면을 키우면 큰 화면에서 내비게이션의 메뉴가 안 보일 수 있다. 그래서 이러한 문제를 방지하려고 내비 메뉴가 보이게 설정을 한다.*/
+	}/*큰 화면 전용 미디어쿼리 min-width: 768px에서 display를 block !important로 지정한다.*/
+}/*display를 block으로 지정하면 보이게 만든다. 또한 마지막 !important를 붙이면 우선적으로 적용된다.*/
+
+
+
+/*콘텐츠 페이지: 기사*/
+.post .container{
+	max-width: 800px;/*현재 상태에서는 기사의 너비가 브라우저 화면에 딱 맞는다. 한 줄에 글자가 많으면 읽기 어려우니, 너비의 최댓값을 지정해 너비 이상으로*/
+	max-width: var(--middle-width);/*커지지 않게 한다. 기사 너비의 최댓값은 --middle-width라는 변수로 지정해서 쉽게 변경할 수 있다.*/
+	margin-left: auto;
+	margin-right: auto;
+	padding: 30px 10px;/*기사 주변 여백 크기를 조정한다. padding을 조정해서 위아래에 30픽셀, 오른쪽 10픽셀의 여백을 넣는다.*/
+}
+
+.post h1{
+	padding-left: 0.5rem;
+	border-left: solid 0.75rem #BF6A7A;/**/
+	border-left: solid 0.75rem var(--accent-color);/*색상을 강조 했다. 폰트 너비에 딸 알맞게 변화 시킨다.*/
+	font-size: 2rem;/*참고 https://www.cmsfactory.net/node/40029 , 제목은 기본폰트의 2배로 지정.. 2em은 2배라는 뜻이다..*/
+}/*실선(solid) 두께를 0.75rem, 색을 32쪽에서 정한 강조 색상(--accent0color/#BF6A7A로 지정한다)*/
+
+.post p {/*본문은 기본 폰트 크기와 같은 크기로 설정, font size를 1rem으로 지정, line-height를 2로 지정해 줄 높이가 본문 폰트 크기의 2배가 되게 설정.*/
+	font-size: 1rem;
+	line-height: 2;
+}
+
+.post img{
+	max-width: 100%/*그림을 크기에 맞추기 위해 100%로 지정한다.*/
+}
+
+
+/*콘텐츠 페이지: 빵 부스러기 리스트*/
+.bread ol{
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.bread a{
+	display: block;
+	padding: 5px;
+	color: inherit;
+	font-size: 0.875rem;/*빵 부스러기 리스트의 폰트 크기는 화면의 너비에 따라 3단계로 변한다. bread a 선택자의 font-size 값을 192page에서 설정한 기본*/
+	text-decoration: none;/*폰트 크기로 설정, 사이즈를 12px, 0.875로 변경*/
+}
+
+.bread a::after {/*구분 문자는 72쪽 아이콘 폰트 사용, a::after선택자의 content를 넣고 싶은 아이콘 문자 코드를 지정*/
+	margin-left: 10px;/*이어서 화살표 아이콘 fa-chevron-right을 넣어 문자 코드를 |f054로 지정, 아이콘과 링크의 거리를 10px로 맞춘다.*/
+	content: '\f054';
+	font-family: 'FontAwesome';
+	opacity: 0.3;
+}
+
+.bread a:hover {
+	background-color: rgba(0,0,0,0.3);
+}
+
+
+
+/* 소개 페이지: 이미지와 연혁 */
+.history {
+	background-color: #5D9AB2;
+	background-color: var(--main-color);
+	color: #fff;
+	color: var(--text-bright-color);
+}
+
+.history .text {
+	padding: 20px;
+}
+
+.history h2 {/*제목의 폰트크기 변경하기, 제목의 폰트 크기는 192쪽의 폰트 크기를 기준으로 3단계 변하였다.*/
+	margin-top: 0;/*따라서 h2의 font-size를 20px에서 1.5rem으로 변경한다.*/
+	margin-bottom: 10px;
+	font-size: 1.5rem;
+}
+
+.history .photo {/*background-image로 출력할 이미지를 지정한다. 현재 예제에서는 식물 이미지를 지정, in-height로 최소한 확보할 이미지 높이를 300px로 지정*/
+	min-height: 300px;
+	background-image: url(img/plant.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+.history table {
+	border-collapse: collapse;/*table의 border-top으로 같은 디자인의 실선을 넣는다.*/
+	border-top: solid 1px #ddd;/*그리고 border-collapse를 집어 넣어 의도하지 않은 여백이 들어가는 것을 막는다.*/
+	border-top: solid 1px var(--gray-color);
+	font-size: 0.875rem;/*tr과 td의 padding-top, padding-bottom으로 위 아래에 여백을 넣어 글자와 실선 사이의 간격을 조정한다.*/
+}
+
+.history th,
+.history td {/*표 tr 사이에 들어가는 줄을 지정한다.*/
+	padding-top: 1.8rem;/*여백을 넣어 글자와 실선 사이의 간격을 조정*/
+	padding-bottom: 1.8rem;/*여백 크기를 1.8rem으로 지정, 레이크포인트에 25.2, 28.8, 32.4px로 크기가 변한다.*/
+	border-bottom: solid 1px #ddd;
+	border-bottom: solid 1px var(--gray-color);
+}
+
+.history th {/*연월에 줄바꿈이 들어가지 않게 한다. th의 white-space를 nowrap word-break를 keep-all로 지정한다.*/
+	padding-right: 1rem;/*padding right으로 지정하여, 오른쪽 1rem의 여백을 넣어 확보한다.*/
+	text-align: left;/*th내부 글자는 기본적으로 중앙 정렬 되는데, 왼쪽으로 정렬 되도록 text-align을 left로 지정한다.*/
+	word-break: keep-all;
+	white-space: nowrap;
+}
+
+
+@media (min-width: 768px) {
+	.history .container {
+		display: flex;
+		max-width: 1000px;
+		max-width: var(--large-width);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.history .photo {
+		flex: 3;
+	}
+	.history .text {
+		flex: 2;
+		padding: 50px;
+	}
+}
+
+
+/*문의 페이지: 문의 대상*/
+.contact{
+	margin-top: 20px;/*박스 margin-top의 여유를 20px로 지정*/
+	margin-bottom: 20px;/*박스 margin-bottom의 여유를 20px로 지정*/
+	padding: 20px;/*박스 내부 padding의 여유를 20px로 지정*/
+	border: solid 1px #ddd;
+	border: solid 1px var(--gray-color);
+	text-align: center;
+}
+
+.contact span{
+	display: inline-block;
+	margin-bottom: 20px;
+	font-size: 2.2rem;/*아이콘의 크기를 지정한다.*/
+	width: 2em;
+	line-height: 2em;
+	border-radius: 50%;
+	text-align: center;
+	background-color: #5D9AB2;/*아이콘의 색상을 메인 색상으로 변경...*/
+	background-color: var(--main-color);
+	color: #fff;
+	color: var(--icon-color);
+}
+
+.contact h2{
+	margin-top: 0;/*제목 h2 제목 위에 의도하지 않은 여백을 제거할 수 있게 margin-top을  0으로 지정한다.*/
+	font-size: 1.2rem;/*제목의 크기를 설정*/
+}
+
+.contact a{
+	font-size: 1.4rem;/*링크의 크기를 지정한다. 또한 제목과 같은 색상으로 지정하고, 밑줄 없이 표시하도록 지정한다.*/
+	color: inherit;
+	text-decoration: none;
+}
+
+
+@media (min-width: 768px) {
+	.contact-wrap {/*contact-wrap이라고 지정해 놓은 태그(전화와 이메일 박스를 합쳐서 contact-wrap이라고 지정해 놓았다.)에 대해서..*/
+		display: flex;
+	}
+
+	.contact{
+		flex: 1;/*너비의 비율을 1로 놓는다.*/
+	}
+
+	.contact:first-child{
+		margin-right:20px;/*큰 화면에서 문의 대상을 가로로 정렬, 2개의 문의를 contact-wrap으로 묶고, 브라우저 너비가 768px 이상일 때 display를 flex로 지정한다.*/
+	}/*문의 대상 너비를 1:1로 지정하고, 그 사이에 픽셀 20을 넣는다..*/
+}
+
+
+/* 문의 페이지: 지도*/
+.location iframe {/*지도 태그*/
+	width: 100%;/*지도의 너비를 100%*/
+	height: 400px;/*지도의 높이를 400px*/
+	vertical-align: bottom;/*vertical-align: bottom으로 지정해서 의도하지 않은 여백을 제거한다.*/
+}
+
+.location h2{
+	margin: 0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #5D9AB2;
+	/*background-color: var(--margin-color);*/
+	color: #fff;
+	/*color: var(--text-bright-color);*/
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+
+
+/* 기사 목록A */
+.listA h1{
+	text-align: center;
+}
+
+.listA .container{
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1000px;
+	max-width: var(--large-width);
+	margin: 30px auto;
+}
+
+.listA article {
+	flex: 1 1 300px;
+	display: flex;
+}
+
+.listA a{
+	flex: 1;
+	margin: 10px;
+	display: block;
+	border: solid 1px #ddd;/*기사 박스에 선 긋기...*/
+	border: solid 1px var(--gray-color);
+	color: inherit;
+	text-decoration: none;
+}
+
+.listA p:hover {
+  color: #3C41D5;
+	font-weight: bold;
+}
+
+.listA .photo{
+	min-height: 150px; /*list에 있던 사진들의 크기에 값을 넣어 줌.*/
+	background-position: center;/*사진의 포지션을 중간으로 넣음*/
+	background-size: cover;
+}
+
+.listA .text {
+	margin: 10px;
+}
+
+.listA h2{
+	font-size: 18px;
+}
+
+.listA p {
+	font-size: 14px;
+	opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
